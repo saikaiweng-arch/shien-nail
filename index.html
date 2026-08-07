@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIEN NAIL | 東京のプライベートネイルサロン</title>
+<meta name="description" content="SHIEN NAIL(シエンネイル)は落ち着いた雰囲気の中で丁寧な施術をお届けするプライベートネイルサロンです。">
+<style>
+  :root{
+    --bg:#fdf9f6;
+    --bg-alt:#f6ece6;
+    --ink:#3a3230;
+    --ink-soft:#6b5f5a;
+    --accent:#c98a7d;
+    --accent-deep:#a9675c;
+    --line:#e7d9d2;
+    --white:#ffffff;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(60,40,30,0.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(253,249,246,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1040px;margin:0 auto;
+  }
+  .logo{font-size:1.3rem;letter-spacing:0.12em;font-weight:600;color:var(--accent-deep);}
+  .logo span{display:block;font-size:0.6rem;letter-spacing:0.3em;color:var(--ink-soft);font-family:sans-serif;}
+  nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
+  nav ul li a{font-size:0.9rem;letter-spacing:0.05em;color:var(--ink-soft);transition:color .2s;}
+  nav ul li a:hover{color:var(--accent-deep);}
+  .nav-cta{
+    background:var(--accent);color:#fff;padding:9px 20px;border-radius:999px;
+    font-size:0.85rem;letter-spacing:0.05em;white-space:nowrap;
+  }
+  .nav-toggle{display:none;background:none;border:none;font-size:1.4rem;color:var(--accent-deep);cursor:pointer;}
+
+  @media (max-width:760px){
+    nav ul{
+      position:fixed;top:64px;left:0;right:0;
+      background:var(--bg);flex-direction:column;gap:0;
+      max-height:0;overflow:hidden;transition:max-height .3s ease;
+      border-bottom:1px solid var(--line);
+    }
+    nav ul.open{max-height:320px;}
+    nav ul li{width:100%;}
+    nav ul li a{display:block;padding:16px 24px;border-top:1px solid var(--line);}
+    .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+  }
+
+  /* Hero */
+  .hero{
+    padding:90px 24px 70px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(201,138,125,0.08), transparent 40%),
+      radial-gradient(circle at 80% 0%, rgba(201,138,125,0.10), transparent 45%);
+  }
+  .hero .eyebrow{
+    font-family:sans-serif;font-size:0.75rem;letter-spacing:0.35em;
+    color:var(--accent-deep);margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2rem,5vw,3.2rem);
+    margin:0 0 20px;
+    letter-spacing:0.06em;
+    font-weight:600;
+  }
+  .hero p{
+    color:var(--ink-soft);max-width:520px;margin:0 auto 34px;
+    font-size:1.02rem;
+  }
+  .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:14px 32px;border-radius:999px;
+    font-size:0.9rem;letter-spacing:0.08em;font-family:sans-serif;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow);}
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-outline{border:1px solid var(--accent);color:var(--accent-deep);}
+  .btn-outline:hover{background:var(--bg-alt);}
+
+  .hero-photo{
+    margin:50px auto 0;max-width:900px;border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow);
+  }
+  .hero-photo .ph{
+    aspect-ratio:16/7;background:linear-gradient(135deg,#f3e2da,#e9c9bb);
+    display:flex;align-items:center;justify-content:center;
+    color:#a9675c;font-family:sans-serif;font-size:0.85rem;letter-spacing:0.1em;
+  }
+
+  section{padding:80px 24px;}
+  .section-head{text-align:center;margin-bottom:52px;}
+  .section-head .eyebrow{
+    font-family:sans-serif;font-size:0.72rem;letter-spacing:0.3em;color:var(--accent-deep);
+    margin-bottom:10px;
+  }
+  .section-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin:0;letter-spacing:0.05em;}
+
+  /* Concept */
+  .concept{background:var(--bg-alt);}
+  .concept-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  }
+  .concept-card{
+    background:var(--white);padding:34px 26px;border-radius:var(--radius);
+    text-align:center;box-shadow:var(--shadow);
+  }
+  .concept-card .num{
+    font-family:sans-serif;font-size:0.75rem;letter-spacing:0.2em;
+    color:var(--accent);display:block;margin-bottom:14px;
+  }
+  .concept-card h3{margin:0 0 12px;font-size:1.05rem;letter-spacing:0.04em;}
+  .concept-card p{color:var(--ink-soft);font-size:0.92rem;margin:0;}
+
+  @media (max-width:760px){.concept-grid{grid-template-columns:1fr;}}
+
+  /* Menu */
+  .menu-table{width:100%;border-collapse:collapse;margin-top:10px;}
+  .menu-table th{
+    text-align:left;font-family:sans-serif;font-size:0.72rem;letter-spacing:0.15em;
+    color:var(--ink-soft);padding:10px 0;border-bottom:2px solid var(--accent);
+  }
+  .menu-table td{padding:16px 0;border-bottom:1px solid var(--line);}
+  .menu-table td.price{text-align:right;font-family:sans-serif;color:var(--accent-deep);font-weight:600;white-space:nowrap;padding-left:16px;}
+  .menu-table td .desc{display:block;color:var(--ink-soft);font-size:0.85rem;margin-top:4px;}
+  .menu-note{margin-top:22px;font-size:0.85rem;color:var(--ink-soft);}
+
+  /* Gallery */
+  .gallery{background:var(--bg-alt);}
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  }
+  .gallery-grid .ph{
+    aspect-ratio:1/1;border-radius:14px;
+    background:linear-gradient(135deg,#f3e2da,#e3b9a8);
+    display:flex;align-items:center;justify-content:center;
+    color:#a9675c;font-family:sans-serif;font-size:0.75rem;letter-spacing:0.08em;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* Access */
+  .access-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+  }
+  .info-list{list-style:none;padding:0;margin:0;}
+  .info-list li{
+    display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);
+  }
+  .info-list .label{
+    flex:0 0 90px;font-family:sans-serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--accent-deep);
+  }
+  .map-ph{
+    aspect-ratio:4/3;border-radius:var(--radius);
+    background:linear-gradient(135deg,#f0e5df,#dccabf);
+    display:flex;align-items:center;justify-content:center;
+    color:#8a6a5e;font-family:sans-serif;font-size:0.85rem;letter-spacing:0.08em;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:760px){.access-grid{grid-template-columns:1fr;}}
+
+  /* CTA banner */
+  .cta-banner{
+    background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+    color:#fff;text-align:center;padding:70px 24px;
+  }
+  .cta-banner h2{margin:0 0 14px;font-size:clamp(1.4rem,3.5vw,2rem);letter-spacing:0.05em;}
+  .cta-banner p{opacity:0.92;margin:0 0 30px;font-family:sans-serif;font-size:0.9rem;}
+  .cta-banner .btn{background:#fff;color:var(--accent-deep);}
+
+  footer{
+    padding:40px 24px;text-align:center;font-family:sans-serif;
+    font-size:0.78rem;color:var(--ink-soft);
+  }
+  footer .fname{display:block;margin-bottom:6px;letter-spacing:0.1em;color:var(--accent-deep);font-size:0.95rem;font-family:"Hiragino Mincho ProN",serif;}
+
+  /* Placeholder badge so it's obvious what to replace */
+  .todo{
+    background:#fff3cd;color:#7a5c00;font-family:sans-serif;font-size:0.72rem;
+    padding:2px 8px;border-radius:6px;margin-left:6px;white-space:nowrap;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">SHIEN NAIL<span>PRIVATE NAIL SALON</span></a>
+    <button class="nav-toggle" aria-label="メニューを開く" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
+    <ul id="navlist">
+      <li><a href="#concept">コンセプト</a></li>
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#gallery">ギャラリー</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#reserve" class="nav-cta">ご予約</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="eyebrow">PRIVATE NAIL SALON</div>
+    <h1>SHIEN NAIL</h1>
+    <p>指先からはじまる、ゆったりとした時間を。<br>お一人おひとりに寄り添う、プライベートネイルサロンです。</p>
+    <div class="btn-row">
+      <a href="#reserve" class="btn btn-primary">ご予約はこちら</a>
+      <a href="#menu" class="btn btn-outline">メニューを見る</a>
+    </div>
+    <div class="hero-photo">
+      <div class="ph">店内・ネイル写真をここに配置 <span class="todo">画像差し替え</span></div>
+    </div>
+  </section>
+
+  <section class="concept" id="concept">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">CONCEPT</div>
+        <h2>SHIEN NAILがめざすこと</h2>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <span class="num">01</span>
+          <h3>丁寧なカウンセリング</h3>
+          <p>お客様のライフスタイルやお悩みをじっくり伺い、なりたい指先を一緒に見つけます。</p>
+        </div>
+        <div class="concept-card">
+          <span class="num">02</span>
+          <h3>清潔で落ち着いた空間</h3>
+          <p>器具は施術ごとに滅菌・消毒を徹底。プライベート感のある空間でリラックスしてお過ごしいただけます。</p>
+        </div>
+        <div class="concept-card">
+          <span class="num">03</span>
+          <h3>長持ちする仕上がり</h3>
+          <p>爪の健康を第一に考えた施術で、美しさと持ちの良さを両立します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">MENU &amp; PRICE</div>
+        <h2>メニュー・料金</h2>
+      </div>
+      <table class="menu-table">
+        <thead>
+          <tr><th>メニュー</th><th style="text-align:right;">料金(税込)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ジェルネイル(ワンカラー)<span class="desc">フィルイン込み・約60分</span></td>
+            <td class="price">¥6,000〜</td>
+          </tr>
+          <tr>
+            <td>ジェルネイル(デザイン)<span class="desc">アート内容により変動・約90分</span></td>
+            <td class="price">¥8,000〜</td>
+          </tr>
+          <tr>
+            <td>フットジェル<span class="desc">角質ケア込み・約90分</span></td>
+            <td class="price">¥9,000〜</td>
+          </tr>
+          <tr>
+            <td>ハンドケア(オフのみ)<span class="desc">約30分</span></td>
+            <td class="price">¥3,000〜</td>
+          </tr>
+          <tr>
+            <td>パラジェル / 持ち込みデザイン<span class="desc">要相談</span></td>
+            <td class="price">要問合せ</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="menu-note">※価格はサンプルです。実際の料金・メニュー内容に差し替えてください。<span class="todo">要編集</span></p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">GALLERY</div>
+        <h2>ネイルギャラリー</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="ph">Photo 1</div>
+        <div class="ph">Photo 2</div>
+        <div class="ph">Photo 3</div>
+        <div class="ph">Photo 4</div>
+        <div class="ph">Photo 5</div>
+        <div class="ph">Photo 6</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">ACCESS</div>
+        <h2>アクセス・営業時間</h2>
+      </div>
+      <div class="access-grid">
+        <ul class="info-list">
+          <li><span class="label">店名</span><span>SHIEN NAIL</span></li>
+          <li><span class="label">住所</span><span>東京都〇〇区〇〇 1-2-3 〇〇ビル2F<span class="todo">要編集</span></span></li>
+          <li><span class="label">最寄駅</span><span>〇〇駅 徒歩5分<span class="todo">要編集</span></span></li>
+          <li><span class="label">営業時間</span><span>10:00〜19:00(最終受付 17:30)</span></li>
+          <li><span class="label">定休日</span><span>不定休</span></li>
+          <li><span class="label">TEL</span><span>000-0000-0000<span class="todo">要編集</span></span></li>
+          <li><span class="label">SNS</span><span><a href="#" style="text-decoration:underline;">Instagram</a>(準備中)</span></li>
+        </ul>
+        <div class="map-ph">Googleマップ埋め込み予定地 <span class="todo">要設定</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="reserve">
+    <h2>ご予約・お問い合わせ</h2>
+    <p>ご来店予約は下記よりお気軽にどうぞ。</p>
+    <a href="#" class="btn">予約サイトへ(準備中)</a>
+  </section>
+
+</main>
+
+<footer>
+  <span class="fname">SHIEN NAIL</span>
+  &copy; <span id="year"></span> SHIEN NAIL. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
