@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SHIEN NAIL | 東京のプライベートネイルサロン</title>
 <meta name="description" content="SHIEN NAIL(シエンネイル)は落ち着いた雰囲気の中で丁寧な施術をお届けするプライベートネイルサロンです。">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <style>
   :root{
     --bg:#fdf9f6;
@@ -43,8 +44,9 @@
     display:flex;align-items:center;justify-content:space-between;
     padding:16px 24px;max-width:1040px;margin:0 auto;
   }
-  .logo{font-size:1.3rem;letter-spacing:0.12em;font-weight:600;color:var(--accent-deep);}
-  .logo span{display:block;font-size:0.6rem;letter-spacing:0.3em;color:var(--ink-soft);font-family:sans-serif;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo img{height:36px;width:auto;display:block;}
+  .logo span{font-size:0.6rem;letter-spacing:0.3em;color:var(--ink-soft);font-family:sans-serif;}
   nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
   nav ul li a{font-size:0.9rem;letter-spacing:0.05em;color:var(--ink-soft);transition:color .2s;}
   nav ul li a:hover{color:var(--accent-deep);}
@@ -208,7 +210,7 @@
 
 <header>
   <div class="nav">
-    <a href="#top" class="logo">SHIEN NAIL<span>PRIVATE NAIL SALON</span></a>
+    <a href="#top" class="logo"><img src="assets/logo.png" alt="SHIEN NAIL（子圓）"><span>PRIVATE NAIL SALON</span></a>
     <button class="nav-toggle" aria-label="メニューを開く" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
     <ul id="navlist">
       <li><a href="#concept">コンセプト</a></li>
@@ -224,7 +226,7 @@
 
   <section class="hero">
     <div class="eyebrow">PRIVATE NAIL SALON</div>
-    <h1>SHIEN NAIL</h1>
+    <img src="assets/logo.png" alt="SHIEN NAIL（子圓）" style="max-width:360px;width:70%;margin:0 auto 20px;">
     <p>指先からはじまる、ゆったりとした時間を。<br>お一人おひとりに寄り添う、プライベートネイルサロンです。</p>
     <div class="btn-row">
       <a href="#reserve" class="btn btn-primary">ご予約はこちら</a>
@@ -267,34 +269,56 @@
         <div class="eyebrow">MENU &amp; PRICE</div>
         <h2>メニュー・料金</h2>
       </div>
+      <h3 style="font-size:0.95rem;letter-spacing:0.1em;color:var(--accent-deep);margin:36px 0 4px;">ハンドネイル(Hand Nail)</h3>
       <table class="menu-table">
-        <thead>
-          <tr><th>メニュー</th><th style="text-align:right;">料金(税込)</th></tr>
-        </thead>
         <tbody>
-          <tr>
-            <td>ジェルネイル(ワンカラー)<span class="desc">フィルイン込み・約60分</span></td>
-            <td class="price">¥6,000〜</td>
-          </tr>
-          <tr>
-            <td>ジェルネイル(デザイン)<span class="desc">アート内容により変動・約90分</span></td>
-            <td class="price">¥8,000〜</td>
-          </tr>
-          <tr>
-            <td>フットジェル<span class="desc">角質ケア込み・約90分</span></td>
-            <td class="price">¥9,000〜</td>
-          </tr>
-          <tr>
-            <td>ハンドケア(オフのみ)<span class="desc">約30分</span></td>
-            <td class="price">¥3,000〜</td>
-          </tr>
-          <tr>
-            <td>パラジェル / 持ち込みデザイン<span class="desc">要相談</span></td>
-            <td class="price">要問合せ</td>
-          </tr>
+          <tr><td>ワンカラー</td><td class="price">¥4,500</td></tr>
+          <tr><td>ラメ</td><td class="price">¥4,500</td></tr>
+          <tr><td>マグネット</td><td class="price">¥5,500</td></tr>
+          <tr><td>ミラー</td><td class="price">¥5,500</td></tr>
+          <tr><td>オーロラ</td><td class="price">¥5,500</td></tr>
+          <tr><td>フレンチ<span class="desc">ベースカラーあり</span></td><td class="price">¥6,600</td></tr>
+          <tr><td>カラーグラデーション<span class="desc">ベースカラーあり</span></td><td class="price">¥6,600</td></tr>
+          <tr><td>アート 4本</td><td class="price">¥6,600</td></tr>
+          <tr><td>アート 6本</td><td class="price">¥7,700</td></tr>
+          <tr><td>アート 10本</td><td class="price">¥9,900</td></tr>
+          <tr><td>チップ 1本</td><td class="price">¥500</td></tr>
+          <tr><td>チップ 10本</td><td class="price">¥4,000</td></tr>
+          <tr><td>ジェルスカルプ 1本</td><td class="price">¥800</td></tr>
+          <tr><td>ジェルスカルプ 10本</td><td class="price">¥7,000</td></tr>
+          <tr><td>補強 1本</td><td class="price">¥600</td></tr>
+          <tr><td>パラジェル</td><td class="price">¥700</td></tr>
         </tbody>
       </table>
-      <p class="menu-note">※価格はサンプルです。実際の料金・メニュー内容に差し替えてください。<span class="todo">要編集</span></p>
+
+      <h3 style="font-size:0.95rem;letter-spacing:0.1em;color:var(--accent-deep);margin:36px 0 4px;">フットネイル(Foot Nail)</h3>
+      <table class="menu-table">
+        <tbody>
+          <tr><td>足(FOOT)<span class="desc">上記ハンドネイル料金+¥1,000</span></td><td class="price">+¥1,000</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:0.95rem;letter-spacing:0.1em;color:var(--accent-deep);margin:36px 0 4px;">付け替えオフ(Off)</h3>
+      <table class="menu-table">
+        <thead>
+          <tr><th>内容</th><th style="text-align:right;">当店</th><th style="text-align:right;padding-left:16px;">他店</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>自爪</td><td class="price">¥600</td><td class="price">¥1,200</td></tr>
+          <tr><td>チップ / ジェルスカルプ</td><td class="price">¥1,200</td><td class="price">¥2,500</td></tr>
+          <tr><td>フット(Foot)</td><td class="price">¥600</td><td class="price">¥600</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:0.95rem;letter-spacing:0.1em;color:var(--accent-deep);margin:36px 0 4px;">オフのみ(Only Off)</h3>
+      <table class="menu-table">
+        <tbody>
+          <tr><td>自爪</td><td class="price">¥2,500</td></tr>
+          <tr><td>スカルプ</td><td class="price">¥3,500</td></tr>
+          <tr><td>フット(Foot)</td><td class="price">¥3,500</td></tr>
+        </tbody>
+      </table>
+      <p class="menu-note">※表示価格はすべて税込です。</p>
     </div>
   </section>
 
@@ -326,7 +350,7 @@
           <li><span class="label">店名</span><span>SHIEN NAIL（子圓)</span></li>
           <li><span class="label">住所</span><span>〒170-0013<br>東京都豊島区東池袋1丁目36-7 アルテール池袋 610</span></li>
           <li><span class="label">最寄駅</span><span>池袋駅 徒歩6分</span></li>
-          <li><span class="label">営業時間</span><span>10:00〜19:00(最終受付 17:30)</span></li>
+          <li><span class="label">営業時間</span><span>11:00〜21:00</span></li>
           <li><span class="label">定休日</span><span>不定休</span></li>
           <li><span class="label">TEL</span><span><a href="tel:0363199153">03-6319-9153</a></span></li>
           <li><span class="label">SNS</span><span><a href="#" style="text-decoration:underline;">Instagram</a>(準備中)</span></li>
