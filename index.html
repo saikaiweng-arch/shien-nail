@@ -121,24 +121,6 @@
   }
   .section-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin:0;letter-spacing:0.05em;}
 
-  /* Concept */
-  .concept{background:var(--bg-alt);}
-  .concept-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
-  }
-  .concept-card{
-    background:var(--white);padding:34px 26px;border-radius:var(--radius);
-    text-align:center;box-shadow:var(--shadow);
-  }
-  .concept-card .num{
-    font-family:sans-serif;font-size:0.75rem;letter-spacing:0.2em;
-    color:var(--accent);display:block;margin-bottom:14px;
-  }
-  .concept-card h3{margin:0 0 12px;font-size:1.05rem;letter-spacing:0.04em;}
-  .concept-card p{color:var(--ink-soft);font-size:0.92rem;margin:0;}
-
-  @media (max-width:760px){.concept-grid{grid-template-columns:1fr;}}
-
   /* Menu */
   .menu-table{width:100%;border-collapse:collapse;margin-top:10px;}
   .menu-table th{
@@ -213,7 +195,6 @@
     <a href="#top" class="logo"><img src="assets/logo.png?v=2" alt="SHIEN NAIL（子圓）"><span>PRIVATE NAIL SALON</span></a>
     <button class="nav-toggle" aria-label="メニューを開く" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
     <ul id="navlist">
-      <li><a href="#concept">コンセプト</a></li>
       <li><a href="#menu">メニュー</a></li>
       <li><a href="#gallery">ギャラリー</a></li>
       <li><a href="#access">アクセス</a></li>
@@ -234,32 +215,6 @@
     </div>
     <div class="hero-photo">
       <div class="ph">店内・ネイル写真をここに配置 <span class="todo">画像差し替え</span></div>
-    </div>
-  </section>
-
-  <section class="concept" id="concept">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">CONCEPT</div>
-        <h2>SHIEN NAILがめざすこと</h2>
-      </div>
-      <div class="concept-grid">
-        <div class="concept-card">
-          <span class="num">01</span>
-          <h3>丁寧なカウンセリング</h3>
-          <p>お客様のライフスタイルやお悩みをじっくり伺い、なりたい指先を一緒に見つけます。</p>
-        </div>
-        <div class="concept-card">
-          <span class="num">02</span>
-          <h3>清潔で落ち着いた空間</h3>
-          <p>器具は施術ごとに滅菌・消毒を徹底。プライベート感のある空間でリラックスしてお過ごしいただけます。</p>
-        </div>
-        <div class="concept-card">
-          <span class="num">03</span>
-          <h3>長持ちする仕上がり</h3>
-          <p>爪の健康を第一に考えた施術で、美しさと持ちの良さを両立します。</p>
-        </div>
-      </div>
     </div>
   </section>
 
