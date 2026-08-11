@@ -66,7 +66,7 @@
     nav ul.open{max-height:320px;}
     nav ul li{width:100%;}
     nav ul li a{display:block;padding:16px 24px;border-top:1px solid var(--line);}
-    .nav-cta{display:none;}
+    .nav-cta{background:none;color:var(--accent-deep);font-weight:600;border-radius:0;padding:16px 24px;}
     .nav-toggle{display:block;}
   }
 
@@ -137,10 +137,12 @@
   .gallery{background:var(--bg-alt);}
   .gallery-grid{
     --tile:260px;
-    display:flex;flex-direction:column;flex-wrap:wrap;
-    height:calc(var(--tile)*2 + 16px);
+    display:grid;
+    grid-template-rows:repeat(2, var(--tile));
+    grid-auto-flow:column;
+    grid-auto-columns:var(--tile);
     gap:16px;
-    overflow-x:auto;overflow-y:hidden;
+    overflow-x:auto;
     padding-bottom:18px;
     scroll-snap-type:x proximity;
     scrollbar-color:var(--accent) transparent;
@@ -149,15 +151,15 @@
   .gallery-grid::-webkit-scrollbar-thumb{background:var(--accent);border-radius:999px;}
   .gallery-grid::-webkit-scrollbar-track{background:transparent;}
   .gallery-grid .ph{
-    flex:0 0 auto;width:var(--tile);height:var(--tile);
-    aspect-ratio:1/1;border-radius:14px;
+    width:var(--tile);height:var(--tile);
+    border-radius:14px;
     background:linear-gradient(135deg,#f3e2da,#e3b9a8);
     display:flex;align-items:center;justify-content:center;
     color:#a9675c;font-family:sans-serif;font-size:0.75rem;letter-spacing:0.08em;
     box-shadow:var(--shadow);
     scroll-snap-align:start;
   }
-  @media (max-width:760px){.gallery-grid{--tile:160px;}}
+  @media (max-width:760px){.gallery-grid{--tile:150px;}}
 
   /* Access */
   .access-grid{
@@ -204,7 +206,7 @@
 <body>
 
 <header>
-  <div class="nav">
+  <nav class="nav">
     <a href="#top" class="logo"><img src="assets/logo.png?v=2" alt="SHIEN NAIL（子圓）"><span>PRIVATE NAIL SALON</span></a>
     <button class="nav-toggle" aria-label="メニューを開く" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
     <ul id="navlist">
@@ -213,7 +215,7 @@
       <li><a href="#access">アクセス</a></li>
       <li><a href="#reserve" class="nav-cta">ご予約</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 
 <main id="top">
